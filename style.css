@@ -6,3 +6,20 @@
   object-position: center center;
   transform: none;
 }
+.hero-visual {
+  height: auto !important;
+  min-height: 620px;
+  overflow: visible !important;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hero-visual img {
+  width: 100%;
+  height: auto !important;
+  max-height: 620px;
+  object-fit: contain !important;
+  object-position: center top !important;
+  transform: none !important;
+}
