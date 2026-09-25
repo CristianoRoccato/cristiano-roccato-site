@@ -23,3 +23,25 @@
   object-position: center top !important;
   transform: none !important;
 }
+/* CORREZIONE FOTO HOME */
+.hero {
+  overflow: visible !important;
+}
+
+.hero-inner {
+  overflow: visible !important;
+}
+
+.hero-visual {
+  overflow: visible !important;
+  height: 620px !important;
+  min-height: 620px !important;
+}
+
+.hero-visual img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center top !important;
+  transform: none !important;
+}
