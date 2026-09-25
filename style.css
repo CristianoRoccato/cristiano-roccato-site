@@ -2,4 +2,9 @@
 .hero-visual img {
   object-position: center 0%;
 }
-
+.hero-visual img {
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(0.92);
+  transform-origin: center top;
+}
