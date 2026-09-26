@@ -8,3 +8,22 @@ img[src="assets/hero.jpg"] {
     transform: none !important;
     display: block !important;
 }
+.hero-visual {
+    position: relative !important;
+}
+
+.hero-visual::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(
+        to right,
+        #08090b 0%,
+        rgba(8, 9, 11, 0.75) 30%,
+        rgba(8, 9, 11, 0) 100%
+    );
+}
