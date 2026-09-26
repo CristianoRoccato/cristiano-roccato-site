@@ -16,3 +16,6 @@
   object-position: center center !important;
   transform: none !important;
 }
+body {
+  background: red !important;
+}
