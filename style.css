@@ -56,4 +56,7 @@ img[src="assets/hero.jpg"] {
     height: auto !important;
   }
 }
-
+#chi-sono .hero-visual,
+#chi-sono .hero-visual::after {
+  display: none !important;
+}
