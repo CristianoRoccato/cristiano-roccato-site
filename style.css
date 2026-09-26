@@ -27,3 +27,33 @@ img[src="assets/hero.jpg"] {
         rgba(8, 9, 11, 0) 100%
     );
 }
+#chi-sono .two {
+  display: grid !important;
+  grid-template-columns: 45% 55% !important;
+  gap: 50px !important;
+  align-items: center !important;
+}
+
+#chi-sono .bio-photo img {
+  width: 100% !important;
+  height: 430px !important;
+  object-fit: cover !important;
+  object-position: center 25% !important;
+  display: block !important;
+  border-radius: 4px;
+}
+
+#chi-sono blockquote {
+  margin-top: 35px !important;
+}
+
+@media (max-width: 800px) {
+  #chi-sono .two {
+    grid-template-columns: 1fr !important;
+  }
+
+  #chi-sono .bio-photo img {
+    height: auto !important;
+  }
+}
+
