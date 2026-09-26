@@ -16,3 +16,11 @@
   object-position: center center !important;
   transform: none !important;
 }
+img[src="assets/hero.jpg"] {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center top !important;
+    transform: none !important;
+}
