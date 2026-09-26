@@ -60,3 +60,25 @@ img[src="assets/hero.jpg"] {
 #chi-sono .hero-visual::after {
   display: none !important;
 }
+#chi-sono .two {
+  grid-template-columns: 48% 52% !important;
+  gap: 55px !important;
+  align-items: center !important;
+}
+
+#chi-sono .bio-photo img {
+  width: 100% !important;
+  height: 480px !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+
+#chi-sono .two p {
+  font-size: 18px !important;
+  line-height: 1.7 !important;
+}
+
+#chi-sono blockquote {
+  margin-top: 45px !important;
+  max-width: 700px !important;
+}
