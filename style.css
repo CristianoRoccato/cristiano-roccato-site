@@ -89,3 +89,18 @@ img[src="assets/hero.jpg"] {
   object-fit: contain;
   margin: 0 auto 18px;
 }
+
+#libro .book img {
+  width: 100% !important;
+  max-width: 380px !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+#libro .book {
+  gap: 70px !important;
+}
+
+#libro .book p {
+  line-height: 1.8 !important;
+}
