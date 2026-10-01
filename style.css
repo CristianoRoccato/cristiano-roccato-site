@@ -156,3 +156,12 @@ img[src="assets/hero.jpg"] {
 .gallery img:hover {
   transform: scale(1.02);
 }
+
+.evento-locandina {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 25px auto 10px;
+    border-radius: 10px;
+}
