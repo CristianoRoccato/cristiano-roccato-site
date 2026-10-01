@@ -160,7 +160,7 @@ img[src="assets/hero.jpg"] {
 .evento-locandina {
     display: block;
     width: 100%;
-    max-width: 420px;
+    max-width: 300px;
     height: auto;
     margin: 25px auto 10px;
     border-radius: 10px;
