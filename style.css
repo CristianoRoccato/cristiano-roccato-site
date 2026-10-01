@@ -165,3 +165,34 @@ img[src="assets/hero.jpg"] {
     margin: 25px auto 10px;
     border-radius: 10px;
 }
+
+.hero-inner {
+    animation: heroEntrata 1.2s ease-out both;
+}
+
+@keyframes heroEntrata {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-glow {
+    animation: glowMovimento 5s ease-in-out infinite alternate;
+}
+
+@keyframes glowMovimento {
+    from {
+        transform: scale(1);
+        opacity: 0.45;
+    }
+    to {
+        transform: scale(1.15);
+        opacity: 0.75;
+    }
+}
+
