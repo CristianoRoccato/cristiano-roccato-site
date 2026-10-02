@@ -278,3 +278,31 @@ img[src="assets/hero.jpg"] {
         animation: none;
     }
 }
+
+.music-ticker {
+    margin-top: 38px;
+    width: 100%;
+    overflow: hidden;
+    padding: 12px 0;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+
+.music-ticker-track {
+    display: inline-block;
+    white-space: nowrap;
+    min-width: max-content;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 13px;
+    animation: tickerMusicaNuovo 15s linear infinite !important;
+}
+
+@keyframes tickerMusicaNuovo {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
