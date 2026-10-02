@@ -167,7 +167,7 @@ img[src="assets/hero.jpg"] {
 }
 
 .hero-inner {
-    animation: heroEntrata 1.2s ease-out both;
+   
 }
 
 @keyframes heroEntrata {
