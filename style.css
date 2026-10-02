@@ -194,5 +194,29 @@ img[src="assets/hero.jpg"] {
         transform: scale(1.15);
         opacity: 0.75;
     }
+
+      font-size: clamp(48px, 7vw, 92px);
+    line-height: 0.95;
+    letter-spacing: -2px;
+    text-shadow: 0 8px 30px rgba(0,0,0,0.45);
+}
+
+.hero-inner h1 span {
+    display: inline-block;
+    animation: nomePulse 4s ease-in-out infinite;
+}
+
+@keyframes nomePulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.025);
+    }
+}
+
+.hero-inner .eyebrow {
+    letter-spacing: 4px;
+}
 }
 
