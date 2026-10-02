@@ -257,3 +257,24 @@ img[src="assets/hero.jpg"] {
     }
 }
 
+}
+
+.music-ticker-track {
+    width: max-content;
+    white-space: nowrap;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 13px;
+    animation: tickerMusica 22s linear infinite;
+}
+
+@keyframes tickerMusica {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .music-ticker-track {
+        animation: none;
+    }
+}
