@@ -280,68 +280,37 @@ img[src="assets/hero.jpg"] {
 }
 
 .music-ticker {
-    margin-top: 38px;
-    width: 100%;
+    width: 420px;
+    max-width: 100%;
     overflow: hidden;
-    padding: 12px 0;
-    border-top: 1px solid rgba(255,255,255,0.18);
-    border-bottom: 1px solid rgba(255,255,255,0.18);
+    margin-top: 25px;
+    padding: 10px 0;
+    border-top: 1px solid #d4af37;
+    border-bottom: 1px solid #d4af37;
 }
 
 .music-ticker-track {
     display: inline-block;
     white-space: nowrap;
-    min-width: max-content;
+    width: max-content;
+    color: #d4af37;
+    font-size: 12px;
     font-weight: 700;
-    letter-spacing: 3px;
-    font-size: 13px;
-    animation: tickerMusicaNuovo 15s linear infinite !important;
+    letter-spacing: 2px;
+    animation: tickerPulito 18s linear infinite;
 }
 
-@keyframes tickerMusicaNuovo {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-.music-ticker {
-    width: 100vw !important;
-    max-width: none !important;
-    overflow: hidden !important;
-    white-space: nowrap;
-    position: relative;
-    left: 0;
-}
-
-.music-ticker-track {
-    display: inline-block !important;
-    width: max-content !important;
-    white-space: nowrap !important;
-    animation: tickerFinale 18s linear infinite !important;
-}
-
-@keyframes tickerFinale {
+@keyframes tickerPulito {
     from {
-        transform: translateX(100vw);
+        transform: translateX(420px);
     }
     to {
         transform: translateX(-100%);
     }
 }
 
-.music-ticker {
-    margin-top: 24px !important;
-    padding: 10px 0 !important;
-    border-top: 1px solid rgba(255, 215, 0, 0.35) !important;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.35) !important;
-}
-
-.music-ticker-track {
-    font-size: 12px !important;
-    font-weight: 700;
-    letter-spacing: 2.5px !important;
-    color: #f2d21b;
+@media (max-width: 600px) {
+    .music-ticker {
+        width: 100%;
+    }
 }
