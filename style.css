@@ -306,3 +306,28 @@ img[src="assets/hero.jpg"] {
         transform: translateX(-100%);
     }
 }
+
+.music-ticker {
+    width: 100vw !important;
+    max-width: none !important;
+    overflow: hidden !important;
+    white-space: nowrap;
+    position: relative;
+    left: 0;
+}
+
+.music-ticker-track {
+    display: inline-block !important;
+    width: max-content !important;
+    white-space: nowrap !important;
+    animation: tickerFinale 18s linear infinite !important;
+}
+
+@keyframes tickerFinale {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
