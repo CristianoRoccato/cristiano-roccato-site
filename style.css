@@ -220,3 +220,40 @@ img[src="assets/hero.jpg"] {
 }
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+    padding: 14px 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.hero-buttons .primary {
+    animation: pulsanteLive 2.5s ease-in-out infinite;
+}
+
+@keyframes pulsanteLive {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
