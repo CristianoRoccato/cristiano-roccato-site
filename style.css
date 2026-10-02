@@ -331,3 +331,17 @@ img[src="assets/hero.jpg"] {
         transform: translateX(-100%);
     }
 }
+
+.music-ticker {
+    margin-top: 24px !important;
+    padding: 10px 0 !important;
+    border-top: 1px solid rgba(255, 215, 0, 0.35) !important;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.35) !important;
+}
+
+.music-ticker-track {
+    font-size: 12px !important;
+    font-weight: 700;
+    letter-spacing: 2.5px !important;
+    color: #f2d21b;
+}
