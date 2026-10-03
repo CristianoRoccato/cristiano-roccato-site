@@ -461,17 +461,16 @@ img[src="assets/hero.jpg"] {
     color: #d4b77e;
 }
 
-/* Copertina sempre visibile */
+/* COPERTINA LIBRO */
 
-#libro > img,
-section#libro.book > img {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    transform: none !important;
-    width: 100% !important;
-    max-width: 430px !important;
-    height: auto !important;
+#libro > img {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    width: 100%;
+    max-width: 430px;
+    height: auto;
 }
 
 
