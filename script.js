@@ -1,24 +1,50 @@
-document.getElementById('year').textContent=new Date().getFullYear();const m=document.getElementById('menu'),n=document.getElementById('navlinks');m.addEventListener('click',()=>n.classList.toggle('open'));n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>n.classList.remove('open')));
+document.addEventListener("DOMContentLoaded", function () {
 
-const cardsMusica = document.querySelectorAll('#musica .cards article');
+    // Anno nel footer
+    const year = document.getElementById("year");
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
 
-const observerMusica = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
+    // Menu
+    const menu = document.getElementById("menu");
+    const navlinks = document.getElementById("navlinks");
 
-            cardsMusica.forEach((card, index) => {
-                setTimeout(() => {
-                    card.classList.add('musica-visibile');
-                }, index * 600);
+    if (menu && navlinks) {
+        menu.addEventListener("click", function () {
+            navlinks.classList.toggle("open");
+        });
+
+        navlinks.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navlinks.classList.remove("open");
             });
+        });
+    }
 
-            observerMusica.disconnect();
-        }
-    });
-}, {
-    threshold: 0.3
+    // Animazione riquadri Musica
+    const cards = document.querySelectorAll("#musica .cards article");
+
+    if (cards.length > 0) {
+
+        const observer = new IntersectionObserver(function (entries) {
+
+            if (entries[0].isIntersecting) {
+
+                cards.forEach(function (card, index) {
+                    setTimeout(function () {
+                        card.classList.add("musica-visibile");
+                    }, index * 600);
+                });
+
+                observer.disconnect();
+            }
+
+        }, {
+            threshold: 0.2
+        });
+
+        observer.observe(cards[0]);
+    }
+
 });
-
-if (cardsMusica.length > 0) {
-    observerMusica.observe(cardsMusica[0]);
-}
