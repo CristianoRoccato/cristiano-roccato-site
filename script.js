@@ -48,3 +48,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+const copertinaLibro = document.querySelector("#libro > img");
+
+if (copertinaLibro) {
+    const observerLibro = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                copertinaLibro.classList.add("libro-visibile");
+                observerLibro.disconnect();
+            }
+        });
+    }, {
+        threshold: 0.25
+    });
+
+    observerLibro.observe(copertinaLibro);
+}
