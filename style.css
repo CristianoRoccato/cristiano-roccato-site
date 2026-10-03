@@ -351,7 +351,7 @@ img[src="assets/hero.jpg"] {
 /* ANIMAZIONE RIQUADRI MUSICA */
 
 #musica .cards article {
-    opacity: 1;
+    opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.7s ease, transform 0.7s ease;
 }
@@ -370,11 +370,7 @@ img[src="assets/hero.jpg"] {
 #libro > img.libro-visibile {
     opacity: 1;
     transform: translateY(0) scale(1);
-}
 
-#musica .cards article {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
 }
 
 #libro > img,
