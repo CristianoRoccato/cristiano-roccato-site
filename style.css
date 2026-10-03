@@ -367,7 +367,7 @@ img[src="assets/hero.jpg"] {
     transition: opacity 1.2s ease, transform 1.2s ease;
 }
 
-#libro > img.libro-visibile {
+libro > img {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
