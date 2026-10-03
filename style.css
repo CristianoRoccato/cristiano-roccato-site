@@ -362,6 +362,12 @@ img[src="assets/hero.jpg"] {
 }
 
 #libro > img {
+    opacity: 0;
+    transform: translateY(45px) scale(0.96);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+#libro > img.libro-visibile {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
