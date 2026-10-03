@@ -810,3 +810,38 @@ footer {
         transition: none;
     }
 }
+
+/* =========================
+   ANIMAZIONE LIBRO
+========================= */
+
+/* Di base il libro resta sempre visibile */
+#libro > img,
+#libro > div {
+    opacity: 1;
+    transform: none;
+}
+
+/* Stato iniziale solo quando JS attiva l'animazione */
+#libro.animazione-libro-pronta > img {
+    opacity: 0 !important;
+    transform: translateY(45px) scale(0.96) !important;
+    transition: opacity 1s ease, transform 1s ease !important;
+}
+
+#libro.animazione-libro-pronta > div {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 1s ease .35s, transform 1s ease .35s;
+}
+
+/* Stato finale */
+#libro.animazione-libro-pronta.libro-visibile > img {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+}
+
+#libro.animazione-libro-pronta.libro-visibile > div {
+    opacity: 1;
+    transform: translateX(0);
+}
