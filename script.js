@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    // =========================
     // ANNO NEL FOOTER
+    // =========================
+
     const year = document.getElementById("year");
 
     if (year) {
@@ -8,7 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+    // =========================
     // MENU
+    // =========================
+
     const menu = document.getElementById("menu");
     const navlinks = document.getElementById("navlinks");
 
@@ -28,52 +34,45 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // ANIMAZIONE RIQUADRI MUSICA
-    const sezioneMusica = document.querySelector("#musica");
-    const cards = document.querySelectorAll("#musica .cards article");
+    // =========================
+    // ANIMAZIONE MUSICA
+    // =========================
 
-    if (sezioneMusica && cards.length > 0) {
+    const sezioneMusica = document.getElementById("musica");
+    const cardsMusica = document.querySelectorAll("#musica .cards article");
 
-        const observerMusica = new IntersectionObserver(function (entries) {
+    if (sezioneMusica && cardsMusica.length > 0) {
 
-            if (entries[0].isIntersecting) {
+        // Attiva lo stato iniziale dell'animazione
+        sezioneMusica.classList.add("animazione-pronta");
 
-                cards.forEach(function (card, index) {
+        const observerMusica = new IntersectionObserver(
+            function (entries) {
 
-                    setTimeout(function () {
-                        card.classList.add("musica-visibile");
-                    }, index * 500);
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        cardsMusica.forEach(function (card, index) {
+
+                            setTimeout(function () {
+                                card.classList.add("musica-visibile");
+                            }, index * 500);
+
+                        });
+
+                        observerMusica.unobserve(sezioneMusica);
+                    }
 
                 });
 
-                observerMusica.disconnect();
+            },
+            {
+                threshold: 0.15
             }
-
-        }, {
-            threshold: 0.25
-        });
+        );
 
         observerMusica.observe(sezioneMusica);
-    }
-
-
-    // ANIMAZIONE COPERTINA LIBRO
-    const copertinaLibro = document.querySelector("#libro > img");
-
-    if (copertinaLibro) {
-
-        const observerLibro = new IntersectionObserver(function (entries) {
-
-            if (entries[0].isIntersecting) {
-                copertinaLibro.classList.add("libro-visibile");
-                observerLibro.disconnect();
-            }
-
-        }, {
-            threshold: 0.25
-        });
-
-        observerLibro.observe(copertinaLibro);
     }
 
 });
