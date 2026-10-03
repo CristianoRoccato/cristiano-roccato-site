@@ -1,5 +1,7 @@
 document.getElementById('year').textContent=new Date().getFullYear();const m=document.getElementById('menu'),n=document.getElementById('navlinks');m.addEventListener('click',()=>n.classList.toggle('open'));n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>n.classList.remove('open')));
 
+const cardsMusica = document.querySelectorAll('#musica .cards article');
+
 const observerMusica = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
