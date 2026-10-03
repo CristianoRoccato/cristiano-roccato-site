@@ -386,12 +386,7 @@ img[src="assets/hero.jpg"] {
     transform: translateY(0);
 }
 
-#musica .cards article:nth-child(1) { transition-delay: 0.1s; }
-#musica .cards article:nth-child(2) { transition-delay: 0.4s; }
-#musica .cards article:nth-child(3) { transition-delay: 0.7s; }
-#musica .cards article:nth-child(4) { transition-delay: 1s; }
-#musica .cards article:nth-child(5) { transition-delay: 1.3s; }
-#musica .cards article:nth-child(6) { transition-delay: 1.6s; }
+
 
     
 
