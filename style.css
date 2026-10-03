@@ -340,41 +340,16 @@ img[src="assets/hero.jpg"] {
         opacity: 0;
         transform: translateY(25px);
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
 
-        #musica .card {
-    opacity: 0;
-    animation: entraCardMusica 0.7s ease-out forwards;
-}
-
-#musica .card:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-#musica .card:nth-child(2) {
-    animation-delay: 0.6s;
-}
-
-#musica .card:nth-child(3) {
-    animation-delay: 1s;
-}
-
-#musica .card:nth-child(4) {
-    animation-delay: 1.4s;
-}
-
-@keyframes entraCardMusica {
-    from {
-        opacity: 0;
-        transform: translateY(35px);
-    }
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
+
+/* ANIMAZIONE RIQUADRI MUSICA */
+
 #musica .cards article {
     opacity: 0;
     transform: translateY(50px);
