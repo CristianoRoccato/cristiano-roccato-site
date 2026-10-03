@@ -23,29 +23,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Animazione riquadri Musica
-    const cards = document.querySelectorAll("#musica .cards article");
+   const observerMusica = new IntersectionObserver(function(entries) {
 
-    if (cards.length > 0) {
+        if (entries[0].isIntersecting) {
 
-        const observer = new IntersectionObserver(function (entries) {
+            cards.forEach(function(card, index) {
 
-            if (entries[0].isIntersecting) {
+                setTimeout(function() {
+                    card.classList.add("musica-visibile");
+                }, index * 500);
 
-                cards.forEach(function (card, index) {
-                    setTimeout(function () {
-                        card.classList.add("musica-visibile");
-                    }, index * 600);
-                });
+            });
 
-                observer.disconnect();
-            }
+            observerMusica.disconnect();
+        }
 
-        }, {
-            threshold: 0.2
-        });
+    }, {
+        threshold: 0.35
+    });
 
-        observer.observe(cards[0]);
-    }
+    observerMusica.observe(sezioneMusica);
+}
 
 });
 
