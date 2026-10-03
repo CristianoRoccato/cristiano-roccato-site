@@ -372,3 +372,12 @@ img[src="assets/hero.jpg"] {
     transform: translateY(0) scale(1);
 }
 
+#musica .cards article {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+#libro > img {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+}
