@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Animazione riquadri Musica
     const cards = document.querySelectorAll("#musica .cards article");
-
+alert("Riquadri Musica trovati: " + cards.length);
     if (cards.length > 0) {
 
         const observer = new IntersectionObserver(function (entries) {
