@@ -383,3 +383,8 @@ section#libro.book > img {
     max-width: 430px !important;
     height: auto !important;
 }
+
+#musica .cards article {
+    opacity: 1 !important;
+    transform: none !important;
+}
