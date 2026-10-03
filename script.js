@@ -1,66 +1,79 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Anno nel footer
+    // ANNO NEL FOOTER
     const year = document.getElementById("year");
+
     if (year) {
         year.textContent = new Date().getFullYear();
     }
 
-    // Menu
+
+    // MENU
     const menu = document.getElementById("menu");
     const navlinks = document.getElementById("navlinks");
 
     if (menu && navlinks) {
+
         menu.addEventListener("click", function () {
             navlinks.classList.toggle("open");
         });
 
         navlinks.querySelectorAll("a").forEach(function (link) {
+
             link.addEventListener("click", function () {
                 navlinks.classList.remove("open");
             });
+
         });
     }
 
-    // Animazione riquadri Musica
-   const observerMusica = new IntersectionObserver(function(entries) {
 
-        if (entries[0].isIntersecting) {
+    // ANIMAZIONE RIQUADRI MUSICA
+    const sezioneMusica = document.querySelector("#musica");
+    const cards = document.querySelectorAll("#musica .cards article");
 
-            cards.forEach(function(card, index) {
+    if (sezioneMusica && cards.length > 0) {
 
-                setTimeout(function() {
-                    card.classList.add("musica-visibile");
-                }, index * 500);
+        const observerMusica = new IntersectionObserver(function (entries) {
 
-            });
+            if (entries[0].isIntersecting) {
 
-            observerMusica.disconnect();
-        }
+                cards.forEach(function (card, index) {
 
-    }, {
-        threshold: 0.35
-    });
+                    setTimeout(function () {
+                        card.classList.add("musica-visibile");
+                    }, index * 500);
 
-    observerMusica.observe(sezioneMusica);
-}
+                });
+
+                observerMusica.disconnect();
+            }
+
+        }, {
+            threshold: 0.25
+        });
+
+        observerMusica.observe(sezioneMusica);
+    }
+
+
+    // ANIMAZIONE COPERTINA LIBRO
+    const copertinaLibro = document.querySelector("#libro > img");
+
+    if (copertinaLibro) {
+
+        const observerLibro = new IntersectionObserver(function (entries) {
+
+            if (entries[0].isIntersecting) {
+                copertinaLibro.classList.add("libro-visibile");
+                observerLibro.disconnect();
+            }
+
+        }, {
+            threshold: 0.25
+        });
+
+        observerLibro.observe(copertinaLibro);
+    }
 
 });
-
-const copertinaLibro = document.querySelector("#libro > img");
-
-if (copertinaLibro) {
-    const observerLibro = new IntersectionObserver(function(entries) {
-        if (entries[0].isIntersecting) {
-            copertinaLibro.classList.add("libro-visibile");
-            observerLibro.disconnect();
-        }
-    }, {
-        threshold: 0.25
-    });
-
-    observerLibro.observe(copertinaLibro);
-}
-
-});
- 
