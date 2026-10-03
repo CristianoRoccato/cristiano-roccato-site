@@ -377,15 +377,14 @@ img[src="assets/hero.jpg"] {
 }
 #musica .cards article {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 #musica .cards article.musica-visibile {
     opacity: 1;
     transform: translateY(0);
 }
-
 
 
     
