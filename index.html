@@ -35,33 +35,5 @@
 <section id="contatti" class="section contact"><p class="eyebrow">CONTATTI</p><h2>Facciamo musica.</h2><p>Per concerti, collaborazioni, presentazioni del libro e progetti musicali.</p><div class="social-links"><a class="btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=cristiano.roccato@gmail.com">Scrivimi</a><a class="btn" href="https://www.facebook.com/cristiano.roccato" target="_blank" rel="noopener">Facebook</a><a class="btn" href="https://www.youtube.com/@Way72" target="_blank" rel="noopener">YouTube</a><a class="btn" href="https://www.tiktok.com/@cristianoroccato5" target="_blank" rel="noopener">TikTok</a></div><p class="contact-mail"><a href="mailto:cristiano.roccato@gmail.com">cristiano.roccato@gmail.com</a></p></section></main>
 <footer>© <span id="year"></span> Cristiano Roccato · Musician • Author • Choir Director</footer><script src="script.js">
   <script src="./script.js?v=2"></script>
-  <script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    const cards = document.querySelectorAll("#musica .cards article");
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-
-            if (entry.isIntersecting) {
-
-                ccards.forEach(function(card, index) {
-    setTimeout(function() {
-        card.classList.add("musica-visibile");
-    }, index * 700);
-});
-
-                observer.disconnect();
-            }
-
-        });
-    }, { threshold: 0.2 });
-
-    if (cards.length > 0) {
-        observer.observe(cards[0]);
-    }
-
-});
-</script>
 </body>
 </html>
