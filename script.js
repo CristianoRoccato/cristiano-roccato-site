@@ -75,4 +75,37 @@ document.addEventListener("DOMContentLoaded", function () {
         observerMusica.observe(sezioneMusica);
     }
 
+        // =========================
+    // ANIMAZIONE LIBRO
+    // =========================
+
+    const sezioneLibro = document.getElementById("libro");
+
+    if (sezioneLibro) {
+
+        sezioneLibro.classList.add("animazione-libro-pronta");
+
+        const observerLibro = new IntersectionObserver(
+            function (entries) {
+
+                entries.forEach(function (entry) {
+
+                    if (entry.isIntersecting) {
+
+                        sezioneLibro.classList.add("libro-visibile");
+
+                        observerLibro.unobserve(sezioneLibro);
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.20
+            }
+        );
+
+        observerLibro.observe(sezioneLibro);
+    }
+
 });
