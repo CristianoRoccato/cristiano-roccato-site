@@ -45,11 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (entry.isIntersecting) {
 
-                cards.forEach(function(card, index) {
-                    setTimeout(function() {
-                        card.classList.add("musica-visibile");
-                    }, index * 400);
-                });
+                ccards.forEach(function(card, index) {
+    setTimeout(function() {
+        card.classList.add("musica-visibile");
+    }, index * 700);
+});
 
                 observer.disconnect();
             }
