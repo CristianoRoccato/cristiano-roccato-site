@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
         // =========================
+    // =========================
     // ANIMAZIONE LIBRO
     // =========================
 
@@ -83,29 +84,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (sezioneLibro) {
 
-        sezioneLibro.classList.add("animazione-libro-pronta");
+        const copertinaLibro = sezioneLibro.querySelector("img");
+        const testoLibro = sezioneLibro.querySelector("div");
 
-        const observerLibro = new IntersectionObserver(
-            function (entries) {
+        if (copertinaLibro && testoLibro) {
 
-                entries.forEach(function (entry) {
+            copertinaLibro.style.opacity = "0";
+            copertinaLibro.style.transform = "translateY(60px) scale(0.94)";
+            copertinaLibro.style.transition =
+                "opacity 1.2s ease, transform 1.2s ease";
 
-                    if (entry.isIntersecting) {
+            testoLibro.style.opacity = "0";
+            testoLibro.style.transform = "translateX(60px)";
+            testoLibro.style.transition =
+                "opacity 1s ease 0.5s, transform 1s ease 0.5s";
 
-                        sezioneLibro.classList.add("libro-visibile");
+            const observerLibro = new IntersectionObserver(
+                function (entries) {
 
-                        observerLibro.unobserve(sezioneLibro);
-                    }
+                    entries.forEach(function (entry) {
 
-                });
+                        if (entry.isIntersecting) {
 
-            },
-            {
-                threshold: 0.20
-            }
-        );
+                            copertinaLibro.style.opacity = "1";
+                            copertinaLibro.style.transform =
+                                "translateY(0) scale(1)";
 
-        observerLibro.observe(sezioneLibro);
+                            testoLibro.style.opacity = "1";
+                            testoLibro.style.transform =
+                                "translateX(0)";
+
+                            observerLibro.unobserve(sezioneLibro);
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.25
+                }
+            );
+
+            observerLibro.observe(sezioneLibro);
+        }
     }
 
 });
